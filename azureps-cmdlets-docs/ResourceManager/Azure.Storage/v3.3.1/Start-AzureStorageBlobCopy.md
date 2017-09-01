@@ -1,11 +1,12 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
-ms.assetid: 54585346-04E2-4FB4-B5FD-833A85C46ACB
-online version:
-schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Start-AzureStorageBlobCopy.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Start-AzureStorageBlobCopy.md
+external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
+Module Name: Azure.Storage
+ms.assetid: 54585346-04E2-4FB4-B5FD-833A85C46ACB
+online version: 
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Start-AzureStorageBlobCopy.md
+schema: 2.0.0
 ---
 
 # Start-AzureStorageBlobCopy
@@ -153,7 +154,7 @@ The command starts the copy operation in the context stored in $Context.
 Specifies the absolute URI of a file to copy to an Azure Storage blob.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UriPipeline
 Aliases: SrcUri, SourceUri
 
@@ -170,7 +171,7 @@ If the previous call fails in the specified interval, this cmdlet retries the re
 If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
 Parameter Sets: (All)
 Aliases: 
 
@@ -186,7 +187,7 @@ Specifies a **CloudBlob** object from Azure Storage Client library.
 To obtain a **CloudBlob** object, use the Get-AzureStorageBlob cmdlet.
 
 ```yaml
-Type: CloudBlob
+Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlob
 Parameter Sets: BlobInstance, BlobInstanceToBlobInstance
 Aliases: SrcICloudBlob, SrcCloudBlob, ICloudBlob, SourceICloudBlob, SourceCloudBlob
 
@@ -203,7 +204,7 @@ This cmdlet copies a blob from the container that this parameter specifies.
 To obtain a **CloudBlobContainer** object, use the Get-AzureStorageContainer cmdlet.
 
 ```yaml
-Type: CloudBlobContainer
+Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer
 Parameter Sets: ContainerInstance
 Aliases: SourceCloudBlobContainer
 
@@ -222,7 +223,7 @@ This parameter can help reduce network connection problems in low bandwidth envi
 The default value is 10.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
 Parameter Sets: (All)
 Aliases: 
 
@@ -238,7 +239,7 @@ Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: ContainerName, BlobInstance, BlobInstanceToBlobInstance, ContainerInstance, ShareName, ShareInstance, DirInstance, FileInstance, FileInstanceToBlobInstance
 Aliases: SrcContext, SourceContext
 
@@ -250,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: UriPipeline
 Aliases: SrcContext, SourceContext
 
@@ -265,7 +266,7 @@ Accept wildcard characters: False
 Specifies the name of the destination blob.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ContainerName, BlobInstance, ContainerInstance, ShareName, ShareInstance, DirInstance, FileInstance
 Aliases: DestinationBlob
 
@@ -277,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UriPipeline
 Aliases: DestinationBlob
 
@@ -292,7 +293,7 @@ Accept wildcard characters: False
 Specifies a destination **CloudBlob** object
 
 ```yaml
-Type: CloudBlob
+Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlob
 Parameter Sets: BlobInstanceToBlobInstance, FileInstanceToBlobInstance
 Aliases: DestICloudBlob, DestinationCloudBlob, DestinationICloudBlob
 
@@ -307,7 +308,7 @@ Accept wildcard characters: False
 Specifies the name of the destination container.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ContainerName, BlobInstance, ContainerInstance, ShareName, ShareInstance, DirInstance, FileInstance, UriPipeline
 Aliases: DestinationContainer
 
@@ -323,7 +324,7 @@ Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: DestinationContext
 
@@ -338,7 +339,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet overwrites the destination blob without prompting you for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -354,7 +355,7 @@ Specifies the service side time-out interval, in seconds, for a request.
 If the specified interval elapses before the service processes the request, the storage service returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
 Parameter Sets: (All)
 Aliases: 
 
@@ -369,7 +370,7 @@ Accept wildcard characters: False
 Specifies the name of the source blob.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ContainerName, ContainerInstance
 Aliases: SourceBlob
 
@@ -384,7 +385,7 @@ Accept wildcard characters: False
 Specifies the name of the source container.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ContainerName
 Aliases: SourceContainer
 
@@ -399,7 +400,7 @@ Accept wildcard characters: False
 Specifies a **CloudFileDirectory** object from Azure Storage Client library.
 
 ```yaml
-Type: CloudFileDirectory
+Type: Microsoft.WindowsAzure.Storage.File.CloudFileDirectory
 Parameter Sets: DirInstance
 Aliases: SourceDir
 
@@ -415,7 +416,7 @@ Specifes a **CloudFile** object from Azure Storage Client library.
 You can create it or use Get-AzureStorageFile cmdlet.
 
 ```yaml
-Type: CloudFile
+Type: Microsoft.WindowsAzure.Storage.File.CloudFile
 Parameter Sets: FileInstance, FileInstanceToBlobInstance
 Aliases: SourceFile
 
@@ -430,7 +431,7 @@ Accept wildcard characters: False
 Specifies the source file relative path of source directory or source share.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ShareName, ShareInstance, DirInstance
 Aliases: SourceFilePath
 
@@ -446,7 +447,7 @@ Specifies a **CloudFileShare** object from Azure Storage Client library.
 You can create it or use Get-AzureStorageShare cmdlet.
 
 ```yaml
-Type: CloudFileShare
+Type: Microsoft.WindowsAzure.Storage.File.CloudFileShare
 Parameter Sets: ShareInstance
 Aliases: SourceShare
 
@@ -461,7 +462,7 @@ Accept wildcard characters: False
 Specifies the source share name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ShareName
 Aliases: SourceShareName
 
@@ -476,7 +477,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -492,7 +493,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -509,19 +510,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### CloudBlob
-
 Parameter 'CloudBlob' accepts value of type 'CloudBlob' from the pipeline
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ### CloudFile
-
 Parameter 'SrcFile' accepts value of type 'CloudFile' from the pipeline
 
 ## OUTPUTS

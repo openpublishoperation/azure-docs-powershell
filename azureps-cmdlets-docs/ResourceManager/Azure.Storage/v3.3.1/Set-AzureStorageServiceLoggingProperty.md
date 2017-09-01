@@ -1,11 +1,12 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
-ms.assetid: 5422429E-C609-4C1F-A021-E2A085B5F74E
-online version:
-schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageServiceLoggingProperty.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageServiceLoggingProperty.md
+external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
+Module Name: Azure.Storage
+ms.assetid: 5422429E-C609-4C1F-A021-E2A085B5F74E
+online version: 
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageServiceLoggingProperty.md
+schema: 2.0.0
 ---
 
 # Set-AzureStorageServiceLoggingProperty
@@ -42,7 +43,7 @@ Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -65,7 +66,7 @@ The acceptable values for this parameter are:
 - All
 
 ```yaml
-Type: LoggingOperations[]
+Type: Microsoft.WindowsAzure.Storage.Shared.Protocol.LoggingOperations[]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Read, Write, Delete, All
@@ -82,7 +83,7 @@ Indicates that this cmdlet returns the updated logging properties.
 If you do not specify this parameter, this cmdlet does not return a value.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 Specifies the number of days that the Azure Storage service retains logged information.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
 Parameter Sets: (All)
 Aliases: 
 
@@ -121,7 +122,7 @@ The acceptable values for this parameter are:
 The value of File is not currently supported.
 
 ```yaml
-Type: StorageServiceType
+Type: Microsoft.WindowsAzure.Commands.Storage.Common.StorageServiceType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Blob, Table, Queue, File
@@ -138,7 +139,7 @@ Specifies the version of the Azure Storage service logging.
 The default value is 1.0.
 
 ```yaml
-Type: Double
+Type: System.Nullable`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
 Parameter Sets: (All)
 Aliases: 
 
@@ -155,7 +156,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ## OUTPUTS

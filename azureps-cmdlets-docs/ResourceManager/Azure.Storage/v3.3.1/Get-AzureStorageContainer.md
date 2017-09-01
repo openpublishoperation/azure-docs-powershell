@@ -1,11 +1,12 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
-ms.assetid: 90C3DF13-0010-49B6-A8CD-C6AC34BC3EFA
-online version:
-schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageContainer.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageContainer.md
+external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
+Module Name: Azure.Storage
+ms.assetid: 90C3DF13-0010-49B6-A8CD-C6AC34BC3EFA
+online version: 
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageContainer.md
+schema: 2.0.0
 ---
 
 # Get-AzureStorageContainer
@@ -56,7 +57,7 @@ If the previous call fails in the specified interval, this cmdlet retries the re
 If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +76,7 @@ This parameter can help reduce network connection problems in low bandwidth envi
 The default value is 10.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
 Parameter Sets: (All)
 Aliases: 
 
@@ -91,7 +92,7 @@ Specifies the storage context.
 To create it, you can use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,7 +107,7 @@ Accept wildcard characters: False
 Specifies a continuation token for the blob list.
 
 ```yaml
-Type: BlobContinuationToken
+Type: Microsoft.WindowsAzure.Storage.Blob.BlobContinuationToken
 Parameter Sets: (All)
 Aliases: 
 
@@ -121,7 +122,7 @@ Accept wildcard characters: False
 Specifies the maximum number of objects that this cmdlet returns.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
 Parameter Sets: (All)
 Aliases: 
 
@@ -138,7 +139,7 @@ If container name is empty, the cmdlet lists all the containers.
 Otherwise, it lists all containers that match the specified name or the regular name pattern.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ContainerName
 Aliases: N, Container
 
@@ -154,7 +155,7 @@ Specifies a prefix used in the name of the container or containers you want to g
 You can use this to find all containers that start with the same string, such as "my" or "test".
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ContainerPrefix
 Aliases: 
 
@@ -170,7 +171,7 @@ Specifies the service side time-out interval, in seconds, for a request.
 If the specified interval elapses before the service processes the request, the storage service returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
 Parameter Sets: (All)
 Aliases: 
 
@@ -187,11 +188,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ### String
-
 Parameter 'Name' accepts value of type 'String' from the pipeline
 
 ## OUTPUTS
